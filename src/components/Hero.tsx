@@ -34,16 +34,16 @@ export const Hero = () => {
               
               {/* Enhanced Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Your Pregnancy,
+                Your Safe Pregnancy Companion
                 <br />
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-pulse"> 
-                  Perfectly Protected
+                  On the Blockchain
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                Experience the most <span className="font-semibold text-primary">secure pregnancy journey</span> ever created. 
-                Your health data stays private, your connections remain confidential, and your peace of mind is guaranteed.
+                Track milestones, book appointments, get health tips, and join a supportive community. 
+                Your health data stays <span className="font-semibold text-primary">secure and private</span> on Hedera.
               </p>
             </div>
 

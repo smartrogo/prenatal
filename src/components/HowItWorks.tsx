@@ -6,28 +6,28 @@ const steps = [
     icon: UserPlus,
     step: "01",
     title: "Create Your Account",
-    description: "Sign up securely with blockchain-based identity verification. Your private keys are generated and stored safely on your device.",
+    description: "Sign up securely. Your credentials and data are protected from the start.",
     color: "from-primary to-secondary"
   },
   {
     icon: Smartphone,
     step: "02", 
     title: "Start Tracking",
-    description: "Begin logging your pregnancy journey with our intuitive interface. All data is encrypted and stored on the Hedera network.",
+    description: "Log your pregnancy journey with our simple interface. All data is encrypted.",
     color: "from-secondary to-accent"
   },
   {
     icon: Shield,
     step: "03",
     title: "Connect Safely",
-    description: "Join our private community and connect with healthcare providers. Your privacy is protected by zero-knowledge protocols.",
+    description: "Join the community and connect with healthcare providers. Your privacy is fully protected.",
     color: "from-accent to-primary"
   },
   {
     icon: Heart,
     step: "04",
     title: "Enjoy Peace of Mind",
-    description: "Focus on your pregnancy knowing your health data is secure, private, and always under your complete control.",
+    description: "Focus on your pregnancy knowing your health data is secure and under your control.",
     color: "from-primary to-accent"
   }
 ];
@@ -42,8 +42,8 @@ export const HowItWorks = () => {
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Prenatal </span>
             Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Getting started with secure, decentralized maternal health care is simple and straightforward
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Get started with secure maternal health care in four simple steps
           </p>
         </div>
 

@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X, Shield } from "lucide-react";
 import { useState } from "react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { label: "Features", href: "#features" },
@@ -49,13 +52,25 @@ export const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="soft" className="font-medium">
-              Sign In
-            </Button>
-            <Button variant="hero" className="font-semibold">
-              Start Free Trial
-              <Heart className="w-4 h-4 ml-2" />
-            </Button>
+            <SignedOut>
+              <Button 
+                variant="ghost" 
+                className="font-medium text-foreground hover:text-primary"
+                onClick={() => navigate("/sign-in")}
+              >
+                Sign In
+              </Button>
+              <Button 
+                className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 shadow-soft"
+                onClick={() => navigate("/sign-up")}
+              >
+                Sign Up
+                <Heart className="w-4 h-4 ml-2" />
+              </Button>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,13 +97,33 @@ export const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-3">
-                <Button variant="soft" className="w-full">
-                  Sign In
-                </Button>
-                <Button variant="hero" className="w-full">
-                  Start Free Trial
-                  <Heart className="w-4 h-4 ml-2" />
-                </Button>
+                <SignedOut>
+                  <Button 
+                    variant="ghost" 
+                    className="w-full text-foreground hover:text-primary"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate("/sign-in");
+                    }}
+                  >
+                    Sign In
+                  </Button>
+                  <Button 
+                    className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate("/sign-up");
+                    }}
+                  >
+                    Sign Up
+                    <Heart className="w-4 h-4 ml-2" />
+                  </Button>
+                </SignedOut>
+                <SignedIn>
+                  <div className="flex justify-center pt-2">
+                    <UserButton afterSignOutUrl="/" />
+                  </div>
+                </SignedIn>
               </div>
             </div>
           </div>

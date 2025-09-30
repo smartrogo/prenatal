@@ -5,37 +5,37 @@ const features = [
   {
     icon: Activity,
     title: "Pregnancy Tracking",
-    description: "Monitor your baby's development with personalized insights, milestone tracking, and secure health data storage on the blockchain.",
+    description: "Track your baby's growth week by week with personalized insights and milestone notifications, all securely stored.",
     gradient: "from-primary to-secondary"
   },
   {
     icon: Calendar,
     title: "Expert Appointments",
-    description: "Book and manage gynecologist appointments seamlessly with verified healthcare providers in your network.",
+    description: "Easily schedule and manage appointments with verified gynecologists and specialists.",
     gradient: "from-secondary to-accent"
   },
   {
     icon: Bell,
     title: "Daily Health Tips",
-    description: "Receive personalized, evidence-based health advice tailored to your pregnancy stage and individual needs.",
+    description: "Get personalized, evidence-based health advice tailored to your current pregnancy week.",
     gradient: "from-accent to-primary"
   },
   {
     icon: Users,
     title: "Private Community",
-    description: "Connect with other expecting mothers in a secure, private environment where your conversations stay confidential.",
+    description: "Connect with other expecting mothers in a secure space where conversations remain completely private.",
     gradient: "from-primary to-accent"
   },
   {
     icon: Lock,
     title: "Data Ownership",
-    description: "Your health data belongs to you. Stored securely on Hedera blockchain with complete privacy and control.",
+    description: "Your health data is yours. Secured on Hedera blockchain with full privacy and control.",
     gradient: "from-secondary to-primary"
   },
   {
     icon: MessageCircle,
     title: "24/7 Support",
-    description: "Access round-the-clock support from our maternal health specialists and community moderators.",
+    description: "Get help anytime from our maternal health specialists and AI assistant.",
     gradient: "from-accent to-secondary"
   }
 ];
@@ -46,11 +46,11 @@ export const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Everything You Need for a 
+            Everything for a 
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Safe Journey</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive maternal health tools built on the most secure and sustainable blockchain technology
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Complete maternal health tools on secure blockchain technology
           </p>
         </div>
 
